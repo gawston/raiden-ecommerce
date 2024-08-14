@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const lineseed = localFont({
   src: [
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
       <body className={lineseed.className}>
         <Navbar/>
         {children}
+        {/* <Footer/> */}
       </body>
     </html>
   );

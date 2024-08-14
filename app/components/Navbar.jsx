@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Navbar() {
     return(
-        <nav className="sticky top-0 w-full p-2 bg-white border-b">
+        <nav className="sticky top-0 w-full p-2 bg-white border-b z-[1000] bg-opacity-90 backdrop-blur-sm">
             <div className="container mx-auto flex justify-between items-center">
                 <div className="flex items-center gap-4">
                     <Link href="/" className="hover:scale-90 duration-300">
