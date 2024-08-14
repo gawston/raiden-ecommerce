@@ -1,7 +1,25 @@
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import Navbar from "./components/Navbar";
+
+const lineseed = localFont({
+  src: [
+    {
+      path: './fonts/LINESeedSansTH_W_Th.woff2',
+      weight: '100'
+    },
+    {
+      path: './fonts/LINESeedSansTH_W_Rg.woff2',
+      weight: '400'
+    },
+    {
+      path: './fonts/LINESeedSansTH_W_Bd.woff2',
+      weight: '700'
+    }
+  ],
+  variable: '--font-lineseed'
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +29,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={lineseed.className}>
+        <Navbar/>
+        {children}
+      </body>
     </html>
   );
 }
