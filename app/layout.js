@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
       <body className={lineseed.className}>
         <Navbar/>
         {children}
-        {/* <Footer/> */}
+        <Footer/>
       </body>
     </html>
   );

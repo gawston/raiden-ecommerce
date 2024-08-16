@@ -3,7 +3,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="container mx-auto h-screen">
+    <div className="container mx-auto">
+      {/* heros */}
       <div className="relative overflow-hidden rounded-lg">
         <p className="md:block hidden absolute bottom-0 p-4 text-white text-xl mt-2 z-[2]">
           ความสงบสุขและความมั่นคงของ Inazuma คือหน้าที่อันสูงสุดของข้า 
@@ -16,6 +17,108 @@ export default function Home() {
         </p>
         <div className="absolute bg-gradient-to-t from-black h-full w-full opacity-80 z-[1]"></div>
         <Image src="/images/raiden.jpg" width={5000} height={5000} className="h-64 md:h-96 object-cover mt-4 rounded-lg" />
+      </div>
+      {/* Link to */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 mt-4 gap-4">
+        <Link href="#" className="relative hover:scale-[98%] duration-300 h-36 rounded-lg overflow-hidden">
+          <div className="absolute text-white z-[2] p-2 bottom-0">
+            <p className="text-purple-400 font-bold">Products</p>
+            <p className="text-4xl font-bold">สินค้าทั้งหมด</p>
+          </div>
+          <div className="absolute bg-gradient-to-r from-black h-full w-full opacity-70 z-[1]"></div>
+          <Image src="/images/heros.png" width={5000} height={5000} className="w-full h-full object-cover" />
+        </Link>
+        <Link href="#" className="relative hover:scale-[98%] duration-300 h-36 rounded-lg overflow-hidden">
+          <div className="absolute text-white z-[2] p-2 bottom-0">
+            <p className="text-purple-400 font-bold">Topup</p>
+            <p className="text-4xl font-bold">เติมเงิน</p>
+          </div>
+          <div className="absolute bg-gradient-to-r from-black h-full w-full opacity-70 z-[1]"></div>
+          <Image src="/images/heros.png" width={5000} height={5000} className="w-full h-full object-cover" />
+        </Link>
+        <Link href="#" className="relative hover:scale-[98%] duration-300 h-36 rounded-lg overflow-hidden">
+          <div className="absolute text-white z-[2] p-2 bottom-0">
+            <p className="text-purple-400 font-bold">Orders History</p>
+            <p className="text-4xl font-bold">ประวัติการสั่งซื้อ</p>
+          </div>
+          <div className="absolute bg-gradient-to-r from-black h-full w-full opacity-70 z-[1]"></div>
+          <Image src="/images/heros.png" width={5000} height={5000} className="w-full h-full object-cover" />
+        </Link>
+        <Link href="#" className="relative hover:scale-[98%] duration-300 h-36 rounded-lg overflow-hidden">
+          <div className="absolute text-white z-[2] p-2 bottom-0">
+            <p className="text-purple-400 font-bold">Report</p>
+            <p className="text-4xl font-bold">แจ้งปัญหา</p>
+          </div>
+          <div className="absolute bg-gradient-to-r from-black h-full w-full opacity-70 z-[1]"></div>
+          <Image src="/images/heros.png" width={5000} height={5000} className="w-full h-full object-cover" />
+        </Link>
+      </div>
+      {/* anounce */}
+      <div className="w-full p-2 bg-purple-50 mt-4 rounded-lg border border-purple-200 flex items-center gap-2">
+        <div className="bg-purple-200 p-2 rounded-md">ประกาศ</div>
+        <marquee>ข้าเป็นผู้ที่คงอยู่เพื่อปกป้อง Inazuma และข้าจะทำทุกวิถีทางเพื่อรักษาความสงบนี้ไว้ แม้ว่ามันอาจดูเย็นชาหรือไร้ความรู้สึกในสายตาของคนอื่นๆ แต่ข้ารู้ดีว่าความมั่นคงที่แท้จริงไม่สามารถซื้อได้ด้วยความอ่อนโยน ข้าจะยืนหยัดต่อไปอย่างไม่หวั่นไหว ปกป้องดินแดนนี้และประชาชนของข้า ไม่ว่าจะต้องแลกด้วยอะไร ข้าคือ Raiden Shogun, และข้าจะนำพา Inazuma ไปสู่ความนิรันดร์กาล ไม่มีสิ่งใดจะหยุดยั้งข้าได้</marquee>
+      </div>
+      {/* products for you */}
+      <div className="w-full mt-8">
+        <h1 className="text-3xl font-bold">สินค้าแนะนำสำหรับคุณ</h1>
+        <div className="grid grid-cols-5 gap-4 mt-2">
+          {/* product item */}
+          <div className="w-full bg-gray-50 border hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
+            <Link href="/">
+              <Image src="/images/product.jpg" width={700} height={700} className="w-full h-64 object-cover rounded-lg" />
+            </Link>
+            <p className="mt-2 text-xl">ทดสอบสินค้า ชื่อยาวๆหน่อย ยาวอีก ยาวกว่านี้ พอละๆๆๆ</p>
+            <Link href="#">
+              <div className="block w-full bg-purple-300 hover:bg-purple-400 border border-purple-400 duration-300 p-1 rounded-md mt-4">
+                <p className="text-center">สินค้าหมด</p>
+              </div>
+            </Link>
+          </div>
+          <div className="w-full bg-gray-50 border hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
+            <Link href="/">
+              <Image src="/images/product.jpg" width={700} height={700} className="w-full h-64 object-cover rounded-lg" />
+            </Link>
+            <p className="mt-2 text-xl">ทดสอบสินค้า ชื่อยาวๆหน่อย ยาวอีก ยาวกว่านี้ พอละๆๆๆ</p>
+            <Link href="#">
+              <div className="block w-full bg-purple-300 hover:bg-purple-400 border border-purple-400 duration-300 p-1 rounded-md mt-4">
+                <p className="text-center">ราคา 999 บาท</p>
+              </div>
+            </Link>
+          </div>
+          <div className="w-full bg-gray-50 border hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
+            <Link href="/">
+              <Image src="/images/product.jpg" width={700} height={700} className="w-full h-64 object-cover rounded-lg" />
+            </Link>
+            <p className="mt-2 text-xl">ทดสอบสินค้า ชื่อยาวๆหน่อย ยาวอีก ยาวกว่านี้ พอละๆๆๆ</p>
+            <Link href="#">
+              <div className="block w-full bg-purple-300 hover:bg-purple-400 border border-purple-400 duration-300 p-1 rounded-md mt-4">
+                <p className="text-center">ราคา 999 บาท</p>
+              </div>
+            </Link>
+          </div>
+          <div className="w-full bg-gray-50 border hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
+            <Link href="/">
+              <Image src="/images/product.jpg" width={700} height={700} className="w-full h-64 object-cover rounded-lg" />
+            </Link>
+            <p className="mt-2 text-xl">ทดสอบสินค้า ชื่อยาวๆหน่อย ยาวอีก ยาวกว่านี้ พอละๆๆๆ</p>
+            <Link href="#">
+              <div className="block w-full bg-purple-300 hover:bg-purple-400 border border-purple-400 duration-300 p-1 rounded-md mt-4">
+                <p className="text-center">ราคา 999 บาท</p>
+              </div>
+            </Link>
+          </div>
+          <div className="w-full bg-gray-50 border hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
+            <Link href="/">
+              <Image src="/images/product.jpg" width={700} height={700} className="w-full h-64 object-cover rounded-lg" />
+            </Link>
+            <p className="mt-2 text-xl">ทดสอบสินค้า ชื่อยาวๆหน่อย ยาวอีก ยาวกว่านี้ พอละๆๆๆ</p>
+            <Link href="#">
+              <div className="block w-full bg-purple-300 hover:bg-purple-400 border border-purple-400 duration-300 p-1 rounded-md mt-4">
+                <p className="text-center">ราคา 999 บาท</p>
+              </div>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
