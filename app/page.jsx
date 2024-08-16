@@ -19,7 +19,7 @@ export default function Home() {
         <Image src="/images/raiden.jpg" width={5000} height={5000} className="h-64 md:h-96 object-cover rounded-lg" />
       </div>
       {/* Link to */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 mt-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 mt-4 gap-2 md:gap-4">
         <Link href="#" className="relative hover:scale-[98%] duration-300 h-36 rounded-lg overflow-hidden">
           <div className="absolute text-white z-[2] p-2 bottom-0">
             <p className="text-purple-400 font-bold">Products</p>
