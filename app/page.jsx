@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto p-4">
       {/* heros */}
       <div className="relative overflow-hidden rounded-lg">
-        <p className="md:block hidden absolute bottom-0 p-4 text-white text-xl mt-2 z-[2]">
+        <p className="md:block hidden absolute bottom-0 p-4 text-white text-xl z-[2]">
           ความสงบสุขและความมั่นคงของ Inazuma คือหน้าที่อันสูงสุดของข้า 
           ข้าเป็นผู้ปกครองที่ยึดมั่นในความศักดิ์สิทธิ์แห่งนิรันดร์กาล อุดมการณ์นี้ไม่ใช่สิ่งที่ข้าสร้างขึ้นเพื่อตัวเอง 
           แต่มันคือสิ่งที่ข้าได้รับจากบรรพบุรุษ และข้าได้แบกรับเอาไว้เป็นภาระที่ยิ่งใหญ่...นิรันดร์กาลคือสิ่งที่ข้าเชื่อว่าเป็นความสมบูรณ์แบบ 
@@ -15,15 +15,15 @@ export default function Home() {
           นี่คือเหตุผลที่ข้าได้ก้าวเข้าสู่ Euthymia และทิ้งสิ่งอื่นไว้เบื้องหลัง ข้าจะไม่ปล่อยให้ Inazuma ล่มสลายไปพร้อมกับการเปลี่ยนแปลง 
           ข้าจะยืนหยัด ณ จุดนี้ ดั่งหินผาที่ไม่สั่นไหวในสายลมของกาลเวลา
         </p>
-        <div className="absolute bg-gradient-to-t from-black h-full w-full opacity-80 z-[1]"></div>
-        <Image src="/images/raiden.jpg" width={5000} height={5000} className="h-64 md:h-96 object-cover mt-4 rounded-lg" />
+        <div className="hidden md:block absolute bg-gradient-to-t from-black h-full w-full opacity-80 z-[1]"></div>
+        <Image src="/images/raiden.jpg" width={5000} height={5000} className="h-64 md:h-96 object-cover rounded-lg" />
       </div>
       {/* Link to */}
       <div className="grid grid-cols-2 lg:grid-cols-4 mt-4 gap-4">
         <Link href="#" className="relative hover:scale-[98%] duration-300 h-36 rounded-lg overflow-hidden">
           <div className="absolute text-white z-[2] p-2 bottom-0">
             <p className="text-purple-400 font-bold">Products</p>
-            <p className="text-4xl font-bold">สินค้าทั้งหมด</p>
+            <p className="text-xl md:text-4xl font-bold">สินค้าทั้งหมด</p>
           </div>
           <div className="absolute bg-gradient-to-r from-black h-full w-full opacity-70 z-[1]"></div>
           <Image src="/images/heros.png" width={5000} height={5000} className="w-full h-full object-cover" />
@@ -31,7 +31,7 @@ export default function Home() {
         <Link href="#" className="relative hover:scale-[98%] duration-300 h-36 rounded-lg overflow-hidden">
           <div className="absolute text-white z-[2] p-2 bottom-0">
             <p className="text-purple-400 font-bold">Topup</p>
-            <p className="text-4xl font-bold">เติมเงิน</p>
+            <p className="text-xl md:text-4xl font-bold">เติมเงิน</p>
           </div>
           <div className="absolute bg-gradient-to-r from-black h-full w-full opacity-70 z-[1]"></div>
           <Image src="/images/heros.png" width={5000} height={5000} className="w-full h-full object-cover" />
@@ -39,7 +39,7 @@ export default function Home() {
         <Link href="#" className="relative hover:scale-[98%] duration-300 h-36 rounded-lg overflow-hidden">
           <div className="absolute text-white z-[2] p-2 bottom-0">
             <p className="text-purple-400 font-bold">Orders History</p>
-            <p className="text-4xl font-bold">ประวัติการสั่งซื้อ</p>
+            <p className="text-xl md:text-4xl font-bold">ประวัติการสั่งซื้อ</p>
           </div>
           <div className="absolute bg-gradient-to-r from-black h-full w-full opacity-70 z-[1]"></div>
           <Image src="/images/heros.png" width={5000} height={5000} className="w-full h-full object-cover" />
@@ -47,7 +47,7 @@ export default function Home() {
         <Link href="#" className="relative hover:scale-[98%] duration-300 h-36 rounded-lg overflow-hidden">
           <div className="absolute text-white z-[2] p-2 bottom-0">
             <p className="text-purple-400 font-bold">Report</p>
-            <p className="text-4xl font-bold">แจ้งปัญหา</p>
+            <p className="text-xl md:text-4xl font-bold">แจ้งปัญหา</p>
           </div>
           <div className="absolute bg-gradient-to-r from-black h-full w-full opacity-70 z-[1]"></div>
           <Image src="/images/heros.png" width={5000} height={5000} className="w-full h-full object-cover" />
@@ -60,60 +60,63 @@ export default function Home() {
       </div>
       {/* products for you */}
       <div className="w-full mt-8">
-        <h1 className="text-3xl font-bold">สินค้าแนะนำสำหรับคุณ</h1>
-        <div className="grid grid-cols-5 gap-4 mt-2">
+        <div className="flex justify-between items-center">
+          <h1 className="text-3xl font-bold">สินค้าแนะนำสำหรับคุณ</h1>
+          <Link href="/products" className="font-bold text-purple-400 hover:underline">ดูทั้งหมด</Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4 mt-2">
           {/* product item */}
-          <div className="w-full bg-gray-50 border hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
+          <div className="w-full border bg-white hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
             <Link href="/">
               <Image src="/images/product.jpg" width={700} height={700} className="w-full h-64 object-cover rounded-lg" />
             </Link>
             <p className="mt-2 text-xl">ทดสอบสินค้า ชื่อยาวๆหน่อย ยาวอีก ยาวกว่านี้ พอละๆๆๆ</p>
             <Link href="#">
-              <div className="block w-full bg-purple-300 hover:bg-purple-400 border border-purple-400 duration-300 p-1 rounded-md mt-4">
+              <div className="block w-full bg-purple-400 hover:bg-purple-300 border duration-300 p-1 rounded-md mt-4">
                 <p className="text-center">สินค้าหมด</p>
               </div>
             </Link>
           </div>
-          <div className="w-full bg-gray-50 border hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
+          <div className="w-full border bg-white hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
             <Link href="/">
               <Image src="/images/product.jpg" width={700} height={700} className="w-full h-64 object-cover rounded-lg" />
             </Link>
             <p className="mt-2 text-xl">ทดสอบสินค้า ชื่อยาวๆหน่อย ยาวอีก ยาวกว่านี้ พอละๆๆๆ</p>
             <Link href="#">
-              <div className="block w-full bg-purple-300 hover:bg-purple-400 border border-purple-400 duration-300 p-1 rounded-md mt-4">
+              <div className="block w-full bg-purple-400 hover:bg-purple-300 border duration-300 p-1 rounded-md mt-4">
                 <p className="text-center">ราคา 999 บาท</p>
               </div>
             </Link>
           </div>
-          <div className="w-full bg-gray-50 border hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
+          <div className="w-full border bg-white hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
             <Link href="/">
               <Image src="/images/product.jpg" width={700} height={700} className="w-full h-64 object-cover rounded-lg" />
             </Link>
             <p className="mt-2 text-xl">ทดสอบสินค้า ชื่อยาวๆหน่อย ยาวอีก ยาวกว่านี้ พอละๆๆๆ</p>
             <Link href="#">
-              <div className="block w-full bg-purple-300 hover:bg-purple-400 border border-purple-400 duration-300 p-1 rounded-md mt-4">
+              <div className="block w-full bg-purple-400 hover:bg-purple-300 border duration-300 p-1 rounded-md mt-4">
                 <p className="text-center">ราคา 999 บาท</p>
               </div>
             </Link>
           </div>
-          <div className="w-full bg-gray-50 border hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
+          <div className="w-full border bg-white hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
             <Link href="/">
               <Image src="/images/product.jpg" width={700} height={700} className="w-full h-64 object-cover rounded-lg" />
             </Link>
             <p className="mt-2 text-xl">ทดสอบสินค้า ชื่อยาวๆหน่อย ยาวอีก ยาวกว่านี้ พอละๆๆๆ</p>
             <Link href="#">
-              <div className="block w-full bg-purple-300 hover:bg-purple-400 border border-purple-400 duration-300 p-1 rounded-md mt-4">
+              <div className="block w-full bg-purple-400 hover:bg-purple-300 border duration-300 p-1 rounded-md mt-4">
                 <p className="text-center">ราคา 999 บาท</p>
               </div>
             </Link>
           </div>
-          <div className="w-full bg-gray-50 border hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
+          <div className="w-full border bg-white hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
             <Link href="/">
               <Image src="/images/product.jpg" width={700} height={700} className="w-full h-64 object-cover rounded-lg" />
             </Link>
             <p className="mt-2 text-xl">ทดสอบสินค้า ชื่อยาวๆหน่อย ยาวอีก ยาวกว่านี้ พอละๆๆๆ</p>
             <Link href="#">
-              <div className="block w-full bg-purple-300 hover:bg-purple-400 border border-purple-400 duration-300 p-1 rounded-md mt-4">
+              <div className="block w-full bg-purple-400 hover:bg-purple-300 border duration-300 p-1 rounded-md mt-4">
                 <p className="text-center">ราคา 999 บาท</p>
               </div>
             </Link>

@@ -2,21 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: rgba(249, 250, 251, 1);
+}
+
 ::-webkit-scrollbar {
-    width: 7px;
+  width: 7px;
 }
   
 ::-webkit-scrollbar-track {
-    background: #ffffff;
+  background: #ffffff;
 }
   
-  /* Handle of the scrollbar */
-  ::-webkit-scrollbar-thumb {
-    background: #c4c4c4; /* Color of the scrollbar handle */
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #9c9c9c;
-  }
+::-webkit-scrollbar-thumb {
+  background: rgba(216, 180, 254, 1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(192, 132, 252, 1);
+}
   

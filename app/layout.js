@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Imagebanner from "./components/Imagebanner";
 
 const lineseed = localFont({
   src: [
