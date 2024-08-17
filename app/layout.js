@@ -24,7 +24,7 @@ const lineseed = localFont({
 
 export const metadata = {
   title: "EEiShop",
-  description: "Fullstack with Next.js",
+  description: "จะซื้อก็ซื้อ ไม่ซื้อก็เรื่องของแม่มึง",
 };
 
 export default function RootLayout({ children }) {
