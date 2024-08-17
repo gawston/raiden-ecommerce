@@ -45,7 +45,7 @@ export default function Navbar() {
                         <Image src="/images/logo.jpg" width={500} height={300} className="w-10 rounded-lg" />
                     </Link>
                     {/* menu button */}
-                    <div id="menuBtn" onClick={handleMenuOpen}>
+                    <div id="menuBtn" className="cursor-pointer" onClick={handleMenuOpen}>
                         <FiMenu className="text-2xl text-gray-500"/>
                     </div>
                 </div>
