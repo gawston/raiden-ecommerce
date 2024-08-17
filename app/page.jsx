@@ -4,6 +4,7 @@ import Image from "next/image";
 import Imagebanner from "./components/Imagebanner";
 import Cardlink from "./components/Cardlink";
 import Announcement from "./components/Announcement";
+import Productcard from "./components/Productcard";
 
 const cardLinkData = [
   {
@@ -29,6 +30,44 @@ const cardLinkData = [
     img: "/images/heros.png",
     engtext: "Report",
     thtext: "แจ้งปัญหา"
+  },
+]
+
+const ProductData = [
+  {
+    name: "test 1",
+    price: 999,
+    img: "/images/product.jpg",
+    view: "/view",
+    buy: "/buy"
+  },
+  {
+    name: "test 2",
+    price: 999,
+    img: "/images/product.jpg",
+    view: "/view",
+    buy: "/buy"
+  },
+  {
+    name: "test 3",
+    price: 999,
+    img: "/images/product.jpg",
+    view: "/view",
+    buy: "/buy"
+  },
+  {
+    name: "test 4",
+    price: 999,
+    img: "/images/product.jpg",
+    view: "/view",
+    buy: "/buy"
+  },
+  {
+    name: "test 5",
+    price: 999,
+    img: "/images/product.jpg",
+    view: "/view",
+    buy: "/buy"
   },
 ]
 
@@ -63,61 +102,9 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4 mt-2">
           {/* product item */}
-          <div className="w-full border bg-white hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
-            <Link href="/">
-              <Image src="/images/product.jpg" width={700} height={700} className="w-full h-64 object-cover rounded-lg" />
-            </Link>
-            <p className="mt-2 text-xl">ทดสอบสินค้า ชื่อยาวๆหน่อย ยาวอีก ยาวกว่านี้ พอละๆๆๆ</p>
-            <Link href="#">
-              <div className="block w-full bg-purple-400 hover:bg-purple-300 border duration-300 p-1 rounded-md mt-4">
-                <p className="text-center">สินค้าหมด</p>
-              </div>
-            </Link>
-          </div>
-          <div className="w-full border bg-white hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
-            <Link href="/">
-              <Image src="/images/product.jpg" width={700} height={700} className="w-full h-64 object-cover rounded-lg" />
-            </Link>
-            <p className="mt-2 text-xl">ทดสอบสินค้า ชื่อยาวๆหน่อย ยาวอีก ยาวกว่านี้ พอละๆๆๆ</p>
-            <Link href="#">
-              <div className="block w-full bg-purple-400 hover:bg-purple-300 border duration-300 p-1 rounded-md mt-4">
-                <p className="text-center">ราคา 999 บาท</p>
-              </div>
-            </Link>
-          </div>
-          <div className="w-full border bg-white hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
-            <Link href="/">
-              <Image src="/images/product.jpg" width={700} height={700} className="w-full h-64 object-cover rounded-lg" />
-            </Link>
-            <p className="mt-2 text-xl">ทดสอบสินค้า ชื่อยาวๆหน่อย ยาวอีก ยาวกว่านี้ พอละๆๆๆ</p>
-            <Link href="#">
-              <div className="block w-full bg-purple-400 hover:bg-purple-300 border duration-300 p-1 rounded-md mt-4">
-                <p className="text-center">ราคา 999 บาท</p>
-              </div>
-            </Link>
-          </div>
-          <div className="w-full border bg-white hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
-            <Link href="/">
-              <Image src="/images/product.jpg" width={700} height={700} className="w-full h-64 object-cover rounded-lg" />
-            </Link>
-            <p className="mt-2 text-xl">ทดสอบสินค้า ชื่อยาวๆหน่อย ยาวอีก ยาวกว่านี้ พอละๆๆๆ</p>
-            <Link href="#">
-              <div className="block w-full bg-purple-400 hover:bg-purple-300 border duration-300 p-1 rounded-md mt-4">
-                <p className="text-center">ราคา 999 บาท</p>
-              </div>
-            </Link>
-          </div>
-          <div className="w-full border bg-white hover:border-purple-400 hover:scale-[98%] duration-300 p-4 rounded-lg">
-            <Link href="/">
-              <Image src="/images/product.jpg" width={700} height={700} className="w-full h-64 object-cover rounded-lg" />
-            </Link>
-            <p className="mt-2 text-xl">ทดสอบสินค้า ชื่อยาวๆหน่อย ยาวอีก ยาวกว่านี้ พอละๆๆๆ</p>
-            <Link href="#">
-              <div className="block w-full bg-purple-400 hover:bg-purple-300 border duration-300 p-1 rounded-md mt-4">
-                <p className="text-center">ราคา 999 บาท</p>
-              </div>
-            </Link>
-          </div>
+          {ProductData.map((data, index) => (
+            <Productcard key={index} img={data.img} view={data.view} buy={data.buy} name={data.name} price={data.price} />
+          ))}
         </div>
       </div>
     </div>
