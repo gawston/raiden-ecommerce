@@ -7,7 +7,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 3px;
 }
   
 ::-webkit-scrollbar-track {
@@ -15,10 +15,10 @@ body {
 }
   
 ::-webkit-scrollbar-thumb {
-  background: rgba(216, 180, 254, 1);
+  background: rgba(192, 132, 252, 1);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(192, 132, 252, 1);
+  background: rgb(164, 72, 255);
 }
   
