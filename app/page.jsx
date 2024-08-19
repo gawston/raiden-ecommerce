@@ -35,7 +35,7 @@ const cardLinkData = [
 
 const ProductData = [
   {
-    name: "test 1",
+    name: "test1sasasasasasasasasasasasasasasasasa",
     price: 999,
     img: "/images/product.jpg",
     view: "/view",
