@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
+* {
+  touch-action: manipulation;
+}
 
 html, body {
-  touch-action: manipulation;
   background-color: rgba(249, 250, 251, 1);
 }
 
