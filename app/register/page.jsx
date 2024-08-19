@@ -30,7 +30,8 @@ export default function Register() {
         }
 
         try {
-            const res = await axios.post('http://localhost:3000/api/register', {
+            // const res = await axios.post('http://localhost:3000/api/register', {
+            const res = await axios.post('https://eeishop.vercel.app/api/register', {
                 username, email, password
             })
             if (res.status == 201) {
