@@ -49,7 +49,7 @@ export default function Register() {
     return(
         <div className="container mx-auto h-[79.7vh] flex flex-col justify-center items-center">
             <h1 className="text-center text-4xl font-bold mb-4">สมัครสมาชิก</h1>
-            <form onSubmit={handleSubmit} className="border p-6 w-96 rounded-lg bg-white">
+            <form onSubmit={handleSubmit} className="border p-6 w-80 md:w-96 rounded-lg bg-white">
                 {error && (
                     <div className="mb-2 bg-red-500 text-sm text-white rounded-md p-3 flex items-center gap-2"><FiAlertTriangle className="text-lg"/> {error}</div>
                 )}
@@ -73,7 +73,7 @@ export default function Register() {
                     text-white hover:bg-purple-500 duration-300 focus:outline-none cursor-pointer"/>
                 </div>
                 <div className="flex justify-center items-center mt-2 text-sm gap-1">
-                    หากคุณเคยสมัครสมาชิกแล้วคลิก <Link href="/login" className="text-purple-500 font-bold underline"> เข้าสู่ระบบ</Link>
+                    มีบัญชีผู้ใช้แล้ว <Link href="/login" className="text-purple-500 font-bold underline"> เข้าสู่ระบบ</Link>
                 </div>
             </form>
         </div>
