@@ -1,5 +1,4 @@
 import localFont from "next/font/local";
-import Head from 'next/head'
 import "./globals.css";
 
 import Navbar from "./components/Navbar";
@@ -31,9 +30,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, viewport-fit=cover">
-      </Head>
       <body className={lineseed.className}>
         <Navbar/>
         {children}
