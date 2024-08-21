@@ -17,6 +17,7 @@ export default function Register() {
     const [success, setSuccess] = useState("");
 
     const handleSubmit = async (e) => {
+        const usernamePattern = /^[a-zA-Z0-9_]+$/;
         e.preventDefault(); // กันหน้าเว็บ refresh
 
         if(!username || !email || !password || !confirmPassword) {
@@ -29,21 +30,29 @@ export default function Register() {
             return;
         }
 
+        if (!usernamePattern.test(username)) {
+            setError("ชื่อผู้ใช้ไม่เหมาะสม");
+            return;
+        }
+
         try {
-            // const res = await axios.post('http://localhost:3000/api/register', {
-            const res = await axios.post('https://eeishop.vercel.app/api/register', {
-                username, email, password
-            })
-            if (res.status == 201) {
-                const form = e.target;
+            const resCheckUser = await axios.post('/api/checkUser', {username});
+            const user = resCheckUser.data.User;
+            if(user) {
+                setError("คุณมีบัญชีผู้ใช้นี้ในระบบอยู่แล้ว");
+                return;
+            }
+
+            const res = await axios.post('/api/register', {username, email, password});
+            if (res.status == 200) {
                 setError("");
-                form.reset();
+                e.target.reset();       // form reset
                 setSuccess("สมัครสมาชิกสำเร็จ");
             } else {
-                console.log("ไม่สามารถสมัครสมาชิกได้: ", error);
+                console.log("ไม่สามารถลงทะเบียนได้: ", error);
             }
         } catch(error) {
-            console.log("ไม่สามารถสมัครสมาชิกได้: ", error);
+            console.log("Error: ", error);
         }
     }
 

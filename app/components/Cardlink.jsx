@@ -1,6 +1,5 @@
 'use client'
 
-import Proptypes from 'prop-types'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -15,11 +14,4 @@ export default function Cardlink({engtext, thtext, img, path}) {
           <Image src={img} width={5000} height={5000} className="w-full h-full object-cover" />
         </Link>
     )
-}
-
-Cardlink.Proptypes = {
-    engtext: Proptypes.string,
-    thtext: Proptypes.string,
-    img: Proptypes.string,
-    path: Proptypes.string
 }

@@ -1,6 +1,5 @@
 'use client'
 
-import PropTypes from 'prop-types';
 import Image from 'next/image';
 
 export default function Imagebanner({msg, img}) {
@@ -13,7 +12,3 @@ export default function Imagebanner({msg, img}) {
     )
 }
 
-Imagebanner.PropTypes = {
-    msg: PropTypes.string.isRequired,
-    img: PropTypes.string
-}

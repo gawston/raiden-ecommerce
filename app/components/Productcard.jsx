@@ -1,6 +1,5 @@
 'use client'
 
-import Proptypes from 'prop-types'
 import Image from "next/image"
 import Link from 'next/link'
 
@@ -19,12 +18,4 @@ export default function Productcard({name, price, img, buy}) {
             </Link>
         </div>
     )
-}
-
-Productcard.Proptypes = {
-    name: Proptypes.string,
-    price: Proptypes.number,
-    img: Proptypes.string,
-    view: Proptypes.string,
-    buy: Proptypes.string
 }
