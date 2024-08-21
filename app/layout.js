@@ -31,9 +31,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, viewport-fit=cover">
-      </head>
+      </Head>
       <body className={lineseed.className}>
         <Navbar/>
         {children}
