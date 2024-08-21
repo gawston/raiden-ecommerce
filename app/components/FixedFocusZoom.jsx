@@ -1,6 +1,6 @@
 import Head from "next/head"
 
-export default function FixedAutoZoom() {
+export default function FixedFocusZoom() {
     return(
         <>
             <Head>
