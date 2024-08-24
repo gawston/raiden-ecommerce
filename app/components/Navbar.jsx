@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
-import { FiMenu, FiHome, FiShoppingBag, FiCreditCard } from "react-icons/fi";
+import { FiMenu, FiHome, FiShoppingBag, FiCreditCard, FiUser } from "react-icons/fi";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,10 +33,16 @@ export default function Navbar() {
                         </li>
                     </ul>
                 </div>
+                {/* no login */}
                 <div className="flex items-center gap-2">
                     <Link href="/login" className="bg-gray-100 hover:bg-purple-400 hover:text-white duration-150 p-2 rounded-lg">เข้าสู่ระบบ</Link>
                     <Link href="/register" className="bg-gray-100 hover:bg-purple-400 hover:text-white duration-150 p-2 rounded-lg">สมัครสมาชิก</Link>
                 </div>
+                {/* login */}
+                {/* <div className="flex items-center gap-2">
+                    <p className="flex items-center gap-1"><FiUser /> gawstonlnwza007</p>
+                    <p className="bg-gray-100 border border-black border-opacity-10 p-1 rounded-md">10.00 ฿</p>
+                </div> */}
             </div>
             {/* mobile */}
             <div className="container mx-auto block md:hidden px-4">
