@@ -8,7 +8,6 @@ import withReactContent from 'sweetalert2-react-content'
 
 import Forminput from "../components/Forminput";
 import Formpassword from "../components/Formpassword";
-import { FiAlertTriangle, FiCheck } from "react-icons/fi";
 
 export default function Register() {
     const [username, setUsername] = useState("");
