@@ -35,8 +35,8 @@ export default function Navbar() {
                 </div>
                 {/* no login */}
                 <div className="flex items-center gap-2">
-                    <Link href="/login" className="bg-gray-100 hover:bg-purple-400 hover:text-white duration-150 p-2 rounded-lg">เข้าสู่ระบบ</Link>
-                    <Link href="/register" className="bg-gray-100 hover:bg-purple-400 hover:text-white duration-150 p-2 rounded-lg">สมัครสมาชิก</Link>
+                    <Link href="/login" className="bg-gray-50 border border-gray-200 hover:bg-purple-400 hover:text-white duration-150 p-2 rounded-lg">เข้าสู่ระบบ</Link>
+                    <Link href="/register" className="bg-gray-50 border border-gray-200 hover:bg-purple-400 hover:text-white duration-150 p-2 rounded-lg">สมัครสมาชิก</Link>
                 </div>
                 {/* login */}
                 {/* <div className="flex items-center gap-2">

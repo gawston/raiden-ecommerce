@@ -3,9 +3,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function Cardlink({engtext, thtext, img, path}) {
+export default function Cardlink({engtext, thtext, img, goto}) {
     return(
-        <Link href={path} className="relative hover:scale-[98%] duration-300 h-24 md:h-36 rounded-lg overflow-hidden">
+        <Link href={goto} className="relative hover:scale-[98%] duration-300 h-24 md:h-36 rounded-lg overflow-hidden">
           <div className="absolute text-white z-[2] p-2 bottom-0">
             <p className="text-purple-400 font-bold">{engtext}</p>
             <p className="text-xl md:text-4xl font-bold">{thtext}</p>
